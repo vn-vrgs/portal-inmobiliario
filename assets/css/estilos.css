@@ -1,0 +1,16 @@
+.main-section {
+    background-image: url('../img/img-main.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}

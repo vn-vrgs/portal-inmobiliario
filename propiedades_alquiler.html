@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inmobiliaria ADL</title>
+    <title>Propiedades en Alquiler | Inmobiliaria ADL</title>
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/estilos.css" />
     <!-- Bootstrap CDN -->
@@ -36,7 +36,7 @@
               <a class="nav-link" href="propiedades_venta.html">En venta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="propiedades_alquiler.html">Alquiler</a>
+              <a class="nav-link active" aria-current="page" href="propiedades_alquiler.html">Alquiler</a>
             </li>
           </ul>
         </div>
@@ -45,31 +45,14 @@
 
     <!-- Hero -->
     <main class="container-fluid main-section">
-      <h1 class="text-white">Encuentra tu nueva propiedad</h1>
+      <h1 class="text-white">Propiedades en Alquiler</h1>
     </main>
 
-    <div class="container mt-5">
-
-      <!-- Propiedades en venta -->
-      <section id="venta">
-        <h2>Propiedades en venta</h2>
-        <div id="cards-venta" class="row"></div>
-        <a href="propiedades_venta.html" class="btn btn-dark mb-4">
-          Ver todas las propiedades en venta
-        </a>
-      </section>
-
-      <hr />
-
-      <!-- Propiedades en alquiler -->
-      <section id="alquiler" class="mb-5">
-        <h2>Propiedades en alquiler</h2>
+    <div class="container mt-5 mb-5">
+      <section id="alquiler">
+        <h2 class="mb-4">Todas las propiedades en alquiler</h2>
         <div id="cards-alquiler" class="row"></div>
-        <a href="propiedades_alquiler.html" class="btn btn-dark mb-4">
-          Ver todas las propiedades en alquiler
-        </a>
       </section>
-
     </div>
 
     <!-- Font Awesome -->
@@ -82,8 +65,11 @@
     ></script>
     <!-- Scripts propios -->
     <script src="assets/js/helpers.js"></script>
-    <script src="assets/js/propiedades_venta.js"></script>
     <script src="assets/js/propiedades_alquiler.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        renderizarPropiedades(propiedades_alquiler, 'cards-alquiler');
+      });
+    </script>
   </body>
 </html>
